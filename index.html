@@ -4,12 +4,12 @@
         <title>My First 2D Game</title>
         <link rel="stylesheet" href="style.css"/>
     </head>
-    <body class="body">
+    <body class="body" onkeyup="keyCheck(event);">
       
         <div class="startPage" id="startPage">
             <h1>Welcome to My 2D Game</h1>
             
-            <button class="btn" onclick="startGame();">Start Game</button>
+            <button class="btn" onclick="startGame();" onkeyup="keyCheck(event);">Start Game</button>
             <button class="btn" onclick="showInstructions();">Read More</button>
             <button class="btn" onclick="showInfo();">Info</button>
         </div>
