@@ -1,26 +1,81 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>My 2D Game</title>
+        <title>My First 2D Game</title>
         <link rel="stylesheet" href="style.css"/>
     </head>
-    <body class="body" onkeyup="keyCheck(event);">
+    <body class="body">
+      
+        <div class="startPage" id="startPage">
+            <h1>Welcome to My 2D Game</h1>
+            
+            <button class="btn" onclick="startGame();">Start Game</button>
+            <button class="btn" onclick="showInstructions();">Read More</button>
+            <button class="btn" onclick="showInfo();">Info</button>
+        </div>
 
         <div class="background" id="background">
-            <div class="score" id="score"> 0 </div>
+            <div class="score" id="score">0</div>
             <img src="image/Run (1).png" class="knight" id="knight"/>
+        </div>
 
-         </div>
-       <div class="gameOver" id="gameOver">
-        <div>Game Over</div>
-        <div>Your Score</div>
-        <div id="endScore"> 0 </div>
+        <div class="gameOver" id="gameOver">
+            <div>Game Over</div>
+            <div>Your Score</div>
+            <div id="endScore">0</div>
+            <button class="btn" onclick="re();">Try Again</button>
+        </div>
 
-        <button class="btn" onclick="re();">Try Again</button>
-    </div>
+        <div class="instructionsPage" id="instructionsPage">
+            <button class="btn" onclick="hideInstructions();">Back</button>
+            <h1>Instructions</h1>
+            <p>Here's how to play the game...</p>
+        </div>
 
-        
-        
-         <script src="script.js"></script>
-   </body>
+        <div class="infoPage" id="infoPage">
+            <button class="btn" onclick="hideInfo();">Back</button>
+            <h1>About the Game</h1>
+            <p>This game was created by Waruni.</p>
+        </div>
+
+        <script src="script.js"></script>
+
+        <script>
+            // Hide all pages except for the start page on load
+            document.getElementById("background").style.display = "none";
+            document.getElementById("gameOver").style.display = "none";
+            document.getElementById("instructionsPage").style.display = "none";
+            document.getElementById("infoPage").style.display = "none";
+
+            // Function to start the game
+            function startGame() {
+                document.getElementById("startPage").style.display = "none";
+                document.getElementById("background").style.display = "block";
+            }
+
+            // Function to show the instructions page
+            function showInstructions() {
+                document.getElementById("startPage").style.display = "none";
+                document.getElementById("instructionsPage").style.display = "block";
+            }
+
+            // Function to hide the instructions page
+            function hideInstructions() {
+                document.getElementById("instructionsPage").style.display = "none";
+                document.getElementById("startPage").style.display = "block";
+            }
+
+            // Function to show the info page
+            function showInfo() {
+                document.getElementById("startPage").style.display = "none";
+                document.getElementById("infoPage").style.display = "block";
+            }
+
+            // Function to hide the info page
+            function hideInfo() {
+                document.getElementById("infoPage").style.display = "none";
+                document.getElementById("startPage").style.display = "block";
+            }
+        </script>
+    </body>
 </html>

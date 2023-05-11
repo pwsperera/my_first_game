@@ -1,67 +1,250 @@
-.knight{
+  #startPage,
+  .instructionsPage {
     position: absolute;
-    height: 200px;
-    margin-Top: 580px;
-}
-
-.background{
-    width: 100vw;
-    height: 100vh;
-    background-image: url("image/background1.png");
-    background-size: cover;
-    overflow-x: hidden;
-    position: absolute;
-    background-attachment: fixed;
-    
-    
-}
-
-.body{
-    margin: 0px;
-}
-
-.block{
-    position: absolute;
-    width: 60px;
-    height: 90px;
-    background-image: url("image/flame.gif");
-    background-size: cover;
-    margin-top: 685px;
-}
-
-.score{
-    position: absolute;
-    font-size: 90px;
-    font-family: "Arial";
-    font-weight: bold;
-    margin-left: 40px;
-}
-
-.gameOver{
-    position: absolute;
-    width: 100vw;
-    height: 100vh;
-    visibility: hidden;
-
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-
-    font-size: 24px;
-    font-family: "Arial";
-    font-weight: bold;
-}
-
-.btn{
-    width: 400px;
-    height: 40px;
+    background-color: #881e1e;
+    color: rgb(10, 1, 1);
+    z-index: 999;
+    width: 100vw;
+    height: 100vh;
+    background-size: cover;
+    overflow-x: hidden;
+    position: absolute;
+    background-attachment: fixed;
+  }
+  
+  #startPage {
+    background-image: url("image/background.png");
+  }
+  
+  .instructionsPage {
+    background-color: rgba(0, 0, 0, 0.8);
+  }
+  
+  #startPage,
+  .instructionsPage {
+    background-image: url("image/background.png");
+    background-size: cover;
+    overflow-x: hidden;
+    position: absolute;
+    background-attachment: fixed;  
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #881e1e;
+    color: rgb(10, 1, 1);
+    z-index: 999;
+    width: 100vw;
+    height: 100vh;
+    background-size: cover;
+    overflow-x: hidden;
+    position: absolute;
+    background-attachment: fixed;
+  }
+  
+  
+  #startPage h1,
+  .instructionsPage h1 {
+    justify-content: center;
+    text-align: center;
+    font-size: 3rem;
+    margin-bottom: 2rem;
+  }
+  
+  #startPage button,
+  .instructionsPage .btn {
+    font-size: 1.5rem;
+    margin: 1rem;
+    border: 2px solid white;
+    border-radius: 2rem;
+    background-color: transparent;
+    color: rgb(12, 1, 1);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  #startPage button:hover,
+  .instructionsPage .btn:hover {
     background-color: white;
-
-    font-size: 24px;
-    font-family: "Arial";
+    color: #1a1a1a;
+  }
+  
+  #startPage .read-more {
+    color: #333;
+    text-align: center;
+    margin-top: 30px;
+  }
+  
+  #startPage .read-more a {
+    color: #333;
+    text-decoration: none;
+    font-size: 18px;
     font-weight: bold;
-
-    border-style: none;
-    border-radius: 5px;
-}
+  }
+  
+  #startPage .read-more a:hover {
+    text-decoration: underline;
+  }
+  
+  .instructionsPage p {
+    font-size: 1.5em;
+    margin-bottom: 40px;
+    text-align: center;
+  }
+  
+  #infoPage {
+    background-image: url("image/background.png");
+    background-size: cover;
+    overflow-x: hidden;
+    position: absolute;
+    background-attachment: fixed;  
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #881e1e;
+    color: rgb(10, 1, 1);
+    z-index: 999;
+    width: 100vw;
+    height: 100vh;
+    background-size: cover;
+    overflow-x: hidden;
+    position: absolute;
+    background-attachment: fixed;
+      
+    }
+    
+    #infoPage h1 {
+      font-size: 3rem;
+      margin-bottom: 2rem;
+      justify-content: center;
+      align-items: center;
+    }
+    
+    #infoPage button {
+      font-size: 1.5rem;
+      margin: 1rem;
+      border: 2px solid white;
+      border-radius: 2rem;
+      background-color: transparent;
+      color: rgb(12, 1, 1);
+      cursor: pointer;
+      transition: all 0.3s ease;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+    
+    #infoPage button:hover {
+      background-color: white;
+      color: #1a1a1a;
+    }
+    
+    #infoPage .read-more {
+      color: #333;
+      text-align: center;
+      margin-top: 30px;
+    }
+    
+    #infoPage .read-more a {
+      color: #333;
+      text-decoration: none;
+      font-size: 18px;
+      font-weight: bold;
+    }
+    
+    #infoPage .read-more a:hover {
+      text-decoration: underline;
+    }
+    
+    .knight{
+        position: absolute;
+        height: 200px;
+        margin-Top: 580px;
+    }
+    
+    .background{
+        width: 100vw;
+        height: 100vh;
+        background-image: url("image/background1.png");
+        background-size: cover;
+        overflow-x: hidden;
+        position: absolute;
+        background-attachment: fixed;    
+    }
+    
+    .body{
+        margin: 0px;
+    }
+    
+    .block{
+        position: absolute;
+        width: 60px;
+        height: 90px;
+        background-image: url("image/flame.gif");
+        background-size: cover;
+        margin-top: 685px;
+    }
+    
+    .score{
+        position: absolute;
+        font-size: 90px;
+        font-family: "Arial";
+        font-weight: bold;
+        margin-left: 40px;
+    }
+    
+    .gameOver{
+        position: absolute;
+        width: 100vw;
+        height: 100vh;
+        visibility: hidden;
+    
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    
+        font-size: 24px;
+        font-family: "Arial";
+        font-weight: bold;
+    }
+    
+    .btn{
+        width: 400px;
+        height: 40px;
+        background-color: rgb(168, 29, 29);
+    
+        font-size: 24px;
+        font-family: "Arial";
+        font-weight: bold;
+    
+        border-style: none;
+        border-radius: 5px;
+    }
+      
